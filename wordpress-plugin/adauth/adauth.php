@@ -1,11 +1,11 @@
 <?php
 /*
 Plugin Name: AD Authentication
-Plugin URI: http://assett.colorado.edu
+Plugin URI: https://github.com/assettcu/adauth
 Description: Authenticate users with their AD username and password.
 Version: 1.4
 Author: Ryan Carney-Mogan
-Author URI: http://assett.colorado.edu
+Author URI: http://assett.colorado.edu/contact/staff-directory/application-development/
 License:  GNU General Public License
 */
 
