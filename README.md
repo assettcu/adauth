@@ -14,16 +14,18 @@ For instance, everyone in the ASSETT-Admins AD group is added to the wordpress d
 INSTALLATION FOR WORDPRESS
 -----------------------------------------
 Through the backend of wordpress:
+
 1. Download the master-zip from https://github.com/assettcu/adauth/archive/master.zip.
 2. Unzip package.
 3. Open your wordpress site in a browser and log into the backend.
-4. Click on "Plugins"
+4. Click on "Plugins".
 5. Click on "Add New" right next to the title "Plugins" at the top.
 6. Click on "Upload" on the sub-navigation bar below "Install Plugins".
 7. Upload the "adauth.zip" file under the "wordpress-plugins" folder from when you unzipped the package.
 8. It should automatically install the plugin.
 
 Manually installing the plugin:
+
 1. Download the master-zip from https://github.com/assettcu/adauth/archive/master.zip.
 2. Unzip package.
 3. Open your wordpress site in a windows explorer (not internet explorer).
