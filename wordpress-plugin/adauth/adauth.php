@@ -3,7 +3,7 @@
 Plugin Name: AD Authentication
 Plugin URI: https://github.com/assettcu/adauth
 Description: Authenticate users with their AD username and password.
-Version: 1.4
+Version: 1.5
 Author: Ryan Carney-Mogan
 Author URI: http://assett.colorado.edu/contact/staff-directory/application-development/
 License:  GNU General Public License
@@ -38,7 +38,7 @@ class ADAuthenticate
         "ASSETT-Design"=>7,
         "ASSETT-Core"=>3,
         "ASSETT-Staff"=>3,
-        "ASSETT-ATCs"=>3,
+        "ASSETT-TLCs"=>3,
     );
     
     /**
@@ -139,6 +139,11 @@ class ADAuthenticate
                     # Rand password for the password field (cannot be blank)
 					$password = md5($this->gen_rand_password());
                     
+					# If no email found, use identikey@colorado.edu
+					if(!isset($info[0]["mail"][0])) {
+						$info[0]["mail"][0] = $username."@colorado.edu";
+					}
+					
                     # Load up user information to be stored
 					$userinfo = array(
 						"user_pass"		=> $password,
