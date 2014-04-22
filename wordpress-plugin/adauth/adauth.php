@@ -119,6 +119,24 @@ class ADAuthenticate
 						$current_level = ($permlevel > $current_level) ? $permlevel : $current_level;
 					}
 				}
+				
+				# Look up user in local groups permissions
+				$permissions_file = dirname(__FILE__)."/permissions/".$_SERVER["HTTP_HOST"].".txt";
+				if(!$flag) {
+					if(is_file($permissions_file)) {
+						$handle = fopen($permissions_file, "r");
+						if ($handle) {
+							while (($line = fgets($handle)) !== false) {
+								list($group,$permlevel) = explode(" ",$line,2);
+								if($adauth->is_member($group)) {
+									$flag = true;
+									$current_level = ($permlevel > $current_level) ? $permlevel : $current_level;
+								}
+							}
+						}
+						fclose($handle);
+					}
+				}
                 
 				# User is an ASSETT Staff member, add them to the database and return new user
 				if($flag) {
