@@ -25,8 +25,8 @@
 class ADAuth {
 	
 	public $ldap_conn;														# Default connection
-	public $ldap_ad_host 		= 'ldap://dc11.ad.colorado.edu/';	# Active Directory Controller
-	public $ldap_directory_host 	= 'ldap://directory.colorado.edu/';	# Alternate Directory Controller
+	public $ldap_ad_host 		= 'ldaps://dc11.ad.colorado.edu/';	# Active Directory Controller
+	public $ldap_directory_host 	= 'ldaps://directory.colorado.edu/';	# Alternate Directory Controller
 	public $ldap_type 		= "";					# Which directory controller to use
 	public $ldap_port 		= 636;					# SSL port for connecting
 	public $ldap_user_prefix 	= 'AD\\';				# LDAP prefix
